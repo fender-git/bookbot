@@ -36,9 +36,10 @@ def get_book_text(path):
 
 def get_report(book_path, num_words, list_characters):
     print(f"--- Begin report of {book_path} ---")
-    print(f"{num_words} words found in the document"
-          )
-    print(list_characters)
+    print(f"{num_words} words found in the document")
+    print("")
+    for entry in list_characters:
+        print(f"The '{entry['key']}' character was found {entry['count']} times")
     print("--- End report ---")
 
 main()
